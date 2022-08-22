@@ -1,0 +1,15 @@
+[Unit]
+Description=Exchange app
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/node /home/ec2-user/exchange-22a-ubuntu/web/app.js
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=Exchange-app
+User=ec2-user
+
+[Install]
+WantedBy=multi-user.target
