@@ -37,7 +37,12 @@ build {
         source = "../demo-project/exchange-22a-ubuntu.zip"
         destination = "/home/ec2-user/exchange-22a-ubuntu.zip"
     }
-
+   
+    provisioner "file" {
+        source = "../demo-project/api.service"
+        destination = "/tmp/api.service"
+    }
+   
     provisioner "shell" {
         script = "./api.sh"
 

@@ -18,3 +18,7 @@ cd web && npm install
 sleep 30 
 
 cd ../.. && rm -rf exchange-22a-ubuntu.zip
+
+sudo mv /tmp/web.service /etc/systemd/system/web.service
+sudo systemctl enable web.service
+sudo systemctl start web.service

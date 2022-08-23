@@ -3,7 +3,7 @@ Description=Exchange app
 After=multi-user.target
 
 [Service]
-ExecStart=/usr/bin/node /home/ec2-user/exchange-22a-ubuntu/web/app.js
+ExecStart=/usr/bin/node /home/ec2-user/exchange-22a-ubuntu/web/bin/www
 Restart=always
 RestartSec=10
 StandardOutput=syslog

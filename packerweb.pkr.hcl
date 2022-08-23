@@ -38,8 +38,13 @@ build {
         destination = "/home/ec2-user/exchange-22a-ubuntu.zip"
     }
 
+ provisioner "file" {
+        source = "../demo-project/web.service"
+        destination = "/tmp/web.service"
+    }
+
     provisioner "shell" {
-        script = "./exchangeapp.sh"
+        script = "./web.sh"
 
     }
     

@@ -17,3 +17,8 @@ cd api && npm install
 sleep 30
 
 cd ../.. && rm -rf exchange-22a-ubuntu.zip
+
+sudo mv /tmp/api.service /etc/systemd/system/api.service
+sudo systemctl enable api.service
+sudo systemctl start api.service
+
